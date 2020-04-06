@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-kubernetes
+spec:
+  selector:
+    matchLabels:
+      run: hello-kubernetes
+  template:
+    metadata:
+      labels:
+        run: hello-kubernetes
+    spec:
+      containers:
+      - image: paulbouwer/hello-kubernetes:1.7
+        name: hello-kubernetes

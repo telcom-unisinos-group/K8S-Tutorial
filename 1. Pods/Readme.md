@@ -140,4 +140,13 @@ basta salvar o arquivo utilizando `:wq`.
 
 Após verificar que o número de pods foi alterado vamos então remover o `deploy`
 que acarretará na remoção dos pods. Para isso utilize o comando `delete` como
-visto anteriormente.
+visto anteriormente. E confirme que os pods foram realmente removidos.
+
+## Explorando
+
+Altere o arquivo que declara o pod e adicione outras opções de configuração
+disponíveis para o pod, por exemplo, resource limits e resource quotas.
+
+Após feito isso, crie um outro arquivo `.yaml` e tente definir um `deploy`.
+Busque no google por exemplos e sinta-se a vontade por explorar um pouco
+mais o K8S.

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deploy-using-node-selector
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      run: node-selector
+  template:
+    metadata:
+      labels:
+        run: node-selector
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: whitebox01
+      containers:
+      - image: paulbouwer/hello-kubernetes:1.7
+        name: hello-kubernetes
