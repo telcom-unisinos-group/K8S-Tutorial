@@ -5,10 +5,9 @@ Vamos falar de:
 
 1. Pods
 2. Deployments
-3. Config Maps e Secrets
-4. Nodes
-5. Services
-6. Operator Patern
+3. Nodes
+4. Services
+5. Operator Patern
 
 ## Antes de começar
 
@@ -60,3 +59,17 @@ porém, nós também podemos interferir nesse processo.
 
 Vamos ver na prática como podemos interferir na alocação de pods. Os exercícios
 podem ser encontrados [aqui](./2.Nodes/Readme.md)
+
+## Serviços
+
+Serviços no K8S são uma forma de expor as aplicações que estão sendo executadas
+em um conjuto de pods como um serviço de rede. Fornecendo assim uma maneira
+nativa de fazer service discovery, através da utilização de labels. O K8S da
+para cada pod do cluster um IP próprio e um nome de DNS único para um conjunto
+de pods. Através da utilização desse nome DNS o K8S se responsabiliza por fazer
+o balanceamento de carga entre os pods do conjunto específicado.
+
+Para mais detalhes sobre serviços acesse a [documentação do K8S](https://kubernetes.io/docs/concepts/services-networking/service/).
+
+__OBS__: Serviços e rede no K8S é um assunto muito amplo, por isso, é
+importante ler a documentação e outros blogs na internet.
